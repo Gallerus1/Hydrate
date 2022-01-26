@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+  IgnorableNamespaces="uap mp uap6">
+	
+	
+
+  <Identity
+    Name="6713ElijahTurner.EHydrate"
+    Publisher="CN=Gallerus"
+    Version="1.0.3.0" />
+
+  <mp:PhoneIdentity PhoneProductId="f4f99f25-0c26-4012-aad7-174d49e37972" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>EHydrate</DisplayName>
+    <PublisherDisplayName>Elijah Turner</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="Draft_3.App">
+      <uap:VisualElements
+        DisplayName="EHydrate"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="This simple application was created to provide users an easy way to help them stay on track with water consumption. This app notifies the user every 15 minutes to supply themselves with sufficient amounts of water to stay hydrated throughout the day."
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
+        <uap:SplashScreen Image="Assets\SplashScreen.png"  BackgroundColor="#0078D4"/>
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscapeFlipped"/>
+          <uap:Rotation Preference="portraitFlipped"/></uap:InitialRotationPreference>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+	  <uap6:Capability Name="graphicsCapture"/>
+  </Capabilities>
+</Package>
